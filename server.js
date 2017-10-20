@@ -4,9 +4,11 @@ const fs = require('fs');
 const request = require('superagent');
 const base64 = require('base-64');
 const path = require('path');
+const morgan = require('morgan');
 const _ = require('lodash');
 
 const app = express();
+app.use(morgan('combined'));
 
 // Read blacklisted account numbers
 (function() {
@@ -34,7 +36,7 @@ app.get("/check/:account_number", (req, res) => {
   });
 });
 
-app.use('/', express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, 'build')));
 
 app.listen(process.env.PORT || 8080, () =>
   console.log("Started server on port", process.env.PORT || 8080)
