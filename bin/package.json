@@ -1,0 +1,11 @@
+{
+  "name": "account-fraud-checker",
+  "version": "1.0.0",
+  "description": "Tool to check if an Indonesian bank account has been reported as fake.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

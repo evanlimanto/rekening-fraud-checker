@@ -1,0 +1,27 @@
+{
+  "name": "account-fraud-checker",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "base-64": "^0.1.0",
+    "bulma": "^0.6.0",
+    "concurrently": "^3.5.0",
+    "express": "^4.16.2",
+    "forever": "^0.15.3",
+    "memory-cache": "^0.2.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-scripts": "1.0.14",
+    "superagent": "^3.7.0"
+  },
+  "proxy": "http://localhost:8080",
+  "main": "server.js",
+  "scripts": {
+    "magic": "concurrently \"npm run start\" \"npm run watch\"",
+    "start": "forever server.js",
+    "watch": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
