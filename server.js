@@ -14,23 +14,21 @@ app.use(morgan('combined'));
 (function() {
   const blacklistFile = "bin/accs/acc-all.txt";
   const contents = _.split(fs.readFileSync(blacklistFile), "\n");
-  _.forEach(contents, item => cache.put(item, true));
+  _.forEach(contents, item => cache.put(item, "cekrekening.com"));
 })();
 
 app.get("/check/:account_number", (req, res) => {
   const { account_number } = req.params;
   const cached_value = cache.get(account_number);
-  if (cached_value === true) {
-    return res.send("Account blacklisted (cekrekening.com)!");
-  } else if (cached_value === false) {
-    return res.send("Account whitelisted!");
+  if (cached_value) {
+    return res.send(`Account blacklisted! (${cached_value})`);
   }
-  request.get('https://www.kredibel.co.id/check/result/' + 
+  request.get('https://www.kredibel.co.id/check/result/' +
               base64.encode(account_number))
          .end((err, response) => {
     if (response.text.indexOf("Waspada") !== -1) {
-      cache.put(account_number, true);
-      return res.send("Account blacklisted (kredibel.co.id)!");
+      cache.put(account_number, "kredibel.co.id");
+      return res.send("Account blacklisted! (kredibel.co.id)");
     }
     return res.send("Account hasn't been reported for fraud.");
   });
