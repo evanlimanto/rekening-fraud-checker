@@ -34,7 +34,7 @@ app.get("/check/:account_number", (req, res) => {
   });
 });
 
-app.use('/', express.static(path.join(__dirname, 'public')));
+app.use('/', express.static(path.join(__dirname, 'build')));
 
 app.listen(process.env.PORT || 8080, () =>
   console.log("Started server on port", process.env.PORT || 8080)
