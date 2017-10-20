@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import request from 'superagent';
 import 'bulma/css/bulma.css';
 
+import { banks } from './utils';
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -12,7 +14,8 @@ class App extends Component {
   check() {
     this.setState({ loading: true });
     const account = this.refs.account.value;
-    const url = "/check/" + account;
+    const bank = this.refs.bank.value;
+    const url = "/check/" + account + "/" + bank;
     request.get(url).end((err, res) => {
       this.setState({ message: res.text, loading: false });
     });
@@ -31,6 +34,16 @@ class App extends Component {
                   <div className="control">
                     <input className="input" type="text" placeholder="Input Nomor Rekening" ref="account" />
                   </div>
+                </div>
+              </div>
+            </div>
+            <div className="field">
+              <label className="label">Bank</label>
+              <div className="control">
+                <div className="select">
+                  <select ref="bank">
+                    {banks.sort().map(bank => <option value={bank}>{bank}</option>)}
+                  </select>
                 </div>
               </div>
             </div>

@@ -1,262 +1,273 @@
-0
-1000
-1011220483
-1012167918
-1025250369
-1028622259
-1029756305
-1030007758
-1030656861
-1030777138
-1032038243
-1060035098
-1074591279
-1075063691
-1091377018
-1091430296
-109851450
-1102185115
-1110140971
-1131068277
-1160311823
-116799655
-1191961574
-12211
-1221218553
-1223743591
-1260394823
-1290579330
-1320497155
-13863779
-1390226655
-1400143200
-1428778099
-1440389763
-147591585
-1480003230
-1510588653
-151983617
-152560778
-152757474
-152846817
-153272490
-153580976
-1540351763
-1632016449
-1652272147
-1652618108
-1670597772
-173122613
-1734058353
-1771684021
-1771785960
-1830753814
-188997754
-190512941
-192563304
-1950960821
-1960279383
-2090366711
-211211627
-2123
-21232121
-2130012749
-213606408
-2147483647
-214915483
-215334973
-215586557
-218369186
-220960358
-221
-222345
-222992796
-223115066
-227750127
-228185460
-22910088
-22910392
-22910393
-230622507
-230915032
-232507051
-234411555
-237314167
-239361080
-241184345
-246055381
-250902252
-251288371
-251417755
-257201591
-262312273
-275485707
-275967202
-286071247
-29123012
-292192892
-293937560
-301307758
-302445755
-302610243
-304695850
-305543929
-306054835
-306483395
-308871174
-311002744
-316007533
-320360538
-321843041
-322050664
-329775782
-329906057
-331722625
-331770064
-33238991
-333004144
-334340663
-342485411
-345140491
-350525870
-354050505
-354245971
-355915298
-357861656
-358350957
-359192954
-359454208
-359459818
-360590203
-369835453
-371523391
-371620330
-37230685
-37310018
-373315114
-373782081
-376523002
-378749471
-38053566
-381204181
-382174299
-383755807
-384255677
-384269293
-39017067
-393336612
-395166748
-399737551
-401054279
-401500474
-403805690
-406569704
-407524864
-410120666
-413666472
-416150397
-417060659
-418100955
-418351977
-421009243
-421023009
-425878766
-426644840
-430701358
-431121549
-431265683
-431690957
-432837877
-433378344
-434290616
-436788030
-438173465
-438355854
-438499002
-443228580
-443798389
-444877714
-445172407
-448168919
-449489499
-449778593
-450672989
-450714386
-452538839
-452795296
-453680171
-454446775
-454661033
-454789439
-456259614
-456576280
-457758938
-460065973
-460585358
-460810001
-462853384
-466204823
-469996085
-470670568
-474437701
-479192774
-479881017
-480393966
-481949233
-482412266
-485474831
-488546588
-488909327
-494552312
-494746851
-495303704
-502763280
-503442518
-505127582
-505489622
-50552713
-506150928
-506647352
-511827301
-521953473
-538330460
-550572818
-562830601
-576575664
-578314146
-580608744
-580877486
-583285117
-583290841
-584306920
-587998735
-611504089
-620437662
-630009448
-657252330
-66271999
-663214346
-668996522
-675500167
-6777
-689015435
-689744
-712153294
-719001
-73154224
-741011565
-750069000
-76555122
-77553321
-77553344
-78990
-81299992
-813642000
-842030277
-860588404
-883001777
-8888677
-940902649
-948176699
-95231875
-960756053
+0,Bank Negara Indonesia
+0,Bank Rakyat Indonesia
+1000,Bank Mandiri
+1011220483,Bank Rakyat Indonesia (Syariah)
+1012167918,Bank Rakyat Indonesia (Syariah)
+1025250369,Bank Rakyat Indonesia (Syariah)
+1028622259,Bank Negara Indonesia
+1029756305,Bank Rakyat Indonesia (Syariah)
+1030007758,Bank Rakyat Indonesia
+1030656861,Bank Rakyat Indonesia (Syariah)
+1030777138,Bank Rakyat Indonesia (Syariah)
+1032038243,Bank Rakyat Indonesia (Syariah)
+1060035098,Bank Central Asia
+1074591279,Bank Lainnya
+1075063691,Bank Lainnya
+1091377018,Bank Central Asia
+1091430296,Bank Central Asia
+109851450,Bank Negara Indonesia
+1102185115,Bank Central Asia
+1110140971,Bank Central Asia
+1131068277,Bank Central Asia
+1160311823,Bank Central Asia
+116799655,Bank Central Asia
+1191961574,Bank Central Asia
+12211,Bank Negara Indonesia
+1221218553,Bank Central Asia
+1223743591,Bank Lainnya
+1260394823,Bank Central Asia
+1290579330,Bank Central Asia
+1320497155,Bank Central Asia
+13863779,Bank Negara Indonesia
+1390226655,Bank Central Asia
+1400143200,Bank Mandiri
+1428778099,Bank Central Asia
+1440389763,Bank Central Asia
+147591585,Bank Negara Indonesia
+1480003230,Bank Central Asia
+1510588653,Bank Central Asia
+151983617,Bank Central Asia
+152560778,Bank Central Asia
+152757474,Bank Central Asia
+152846817,Bank Central Asia
+153272490,Bank Central Asia
+153580976,Bank Central Asia
+1540351763,Bank Central Asia
+1632016449,Bank Central Asia
+1652272147,Bank Central Asia
+1652618108,Bank Central Asia
+1670597772,Bank Central Asia
+173122613,Bank Negara Indonesia
+1734058353,Bank MayBank
+1771684021,Bank Central Asia
+1771785960,Bank Central Asia
+1830753814,Bank Central Asia
+188997754,Bank Negara Indonesia
+190512941,Bank Central Asia
+192563304,Bank Negara Indonesia
+1950960821,Bank Central Asia
+1960279383,Bank Central Asia
+2090366711,Bank Central Asia
+211211627,Bank Negara Indonesia
+2123,Bank Central Asia
+2123,Unknown
+21232121,Bank Negara Indonesia
+2130012749,Bank Lainnya
+213606408,Bank Negara Indonesia
+2147483647,Bank Central Asia
+2147483647,Bank Negara Indonesia
+2147483647,Bank Rakyat Indonesia
+2147483647,Bank CIMB Niaga
+2147483647,Bank Common Wealth
+2147483647,Bank Lainnya
+2147483647,Bank Mandiri
+2147483647,Bank Mandiri Syariah
+2147483647,Bank Mega
+2147483647,Unknown
+214915483,Bank Negara Indonesia
+215334973,Bank Negara Indonesia
+215586557,Bank Negara Indonesia
+218369186,Bank Negara Indonesia
+220960358,Bank Central Asia
+221,Bank Negara Indonesia
+222345,Bank Negara Indonesia
+222992796,Bank Negara Indonesia
+223115066,Bank Negara Indonesia
+227750127,Bank Negara Indonesia
+228185460,Bank Negara Indonesia
+22910088,Bank Negara Indonesia
+22910392,Bank Mandiri
+22910393,Bank Mandiri
+230622507,Bank Central Asia
+230915032,Bank Central Asia
+232507051,Bank Negara Indonesia
+234411555,Bank Rakyat Indonesia (Syariah)
+237314167,Bank Negara Indonesia
+239361080,Bank Negara Indonesia
+241184345,Bank Negara Indonesia
+246055381,Bank Negara Indonesia
+250902252,Bank Negara Indonesia
+251288371,Bank Central Asia
+251417755,Bank Negara Indonesia
+257201591,Bank Negara Indonesia
+262312273,Bank Central Asia
+275485707,Bank Negara Indonesia
+275967202,Bank Negara Indonesia
+286071247,Bank Negara Indonesia
+29123012,Unknown
+292192892,Bank Central Asia
+293937560,Bank Negara Indonesia
+301307758,Bank Negara Indonesia
+302445755,Bank Negara Indonesia
+302610243,Bank Negara Indonesia
+304695850,Bank Negara Indonesia
+305543929,Bank Negara Indonesia
+306054835,Bank Negara Indonesia
+306483395,Bank Central Asia
+308871174,Bank Negara Indonesia
+311002744,Bank Negara Indonesia
+316007533,Bank Negara Indonesia
+320360538,Bank Negara Indonesia
+321843041,Bank Central Asia
+322050664,Bank Central Asia
+329775782,Bank Negara Indonesia
+329906057,Bank Negara Indonesia
+331722625,Bank Central Asia
+331770064,Bank Negara Indonesia
+33238991,Bank Lainnya
+333004144,Bank Negara Indonesia
+334340663,Bank Negara Indonesia
+342485411,Bank Central Asia
+345140491,Bank Negara Indonesia
+350525870,Bank Negara Indonesia
+354050505,Bank Negara Indonesia
+354245971,Bank Negara Indonesia
+355915298,Bank Negara Indonesia
+357861656,Bank Negara Indonesia
+358350957,Bank Negara Indonesia
+359192954,Bank Negara Indonesia
+359454208,Bank Negara Indonesia
+359459818,Bank Negara Indonesia
+360590203,Bank Negara Indonesia
+369835453,Bank Negara Indonesia
+371523391,Bank Central Asia
+371620330,Bank Negara Indonesia
+37230685,Bank Rakyat Indonesia
+37310018,Bank Lainnya
+373315114,Bank Central Asia
+373782081,Bank Central Asia
+376523002,Bank Negara Indonesia
+378749471,Bank Negara Indonesia
+38053566,Bank Lainnya
+381204181,Bank Negara Indonesia
+382174299,Bank Negara Indonesia
+383755807,Bank Negara Indonesia
+384255677,Bank Negara Indonesia
+384269293,Bank Negara Indonesia
+39017067,Bank Lainnya
+393336612,Bank Negara Indonesia
+395166748,Bank Negara Indonesia
+399737551,Bank Negara Indonesia
+401054279,Bank Negara Indonesia
+401500474,Bank Negara Indonesia
+403805690,Bank Negara Indonesia
+406569704,Bank Negara Indonesia
+407524864,Bank Negara Indonesia
+410120666,Bank Central Asia
+413666472,Bank Negara Indonesia
+416150397,Bank Negara Indonesia
+417060659,Bank Negara Indonesia
+418100955,Bank Negara Indonesia
+418351977,Bank Negara Indonesia
+421009243,Bank Central Asia
+421023009,Bank Central Asia
+425878766,Bank Negara Indonesia
+426644840,Bank Central Asia
+430701358,Bank Negara Indonesia
+431121549,Bank Negara Indonesia
+431265683,Bank Negara Indonesia
+431690957,Bank Negara Indonesia
+432837877,Bank Negara Indonesia
+433378344,Bank Negara Indonesia
+434290616,Bank Negara Indonesia
+436788030,Bank Negara Indonesia
+438173465,Bank Negara Indonesia
+438355854,Bank Negara Indonesia
+438499002,Bank Negara Indonesia
+443228580,Bank Negara Indonesia
+443798389,Bank Negara Indonesia
+444877714,Bank Negara Indonesia
+445172407,Bank Negara Indonesia
+448168919,Bank Negara Indonesia
+449489499,Bank Negara Indonesia
+449778593,Bank Negara Indonesia
+450672989,Bank Negara Indonesia
+450714386,Bank Negara Indonesia
+452538839,Bank Negara Indonesia
+452795296,Bank Negara Indonesia
+453680171,Bank Negara Indonesia
+454446775,Bank Negara Indonesia
+454661033,Bank Negara Indonesia
+454789439,Bank Negara Indonesia
+456259614,Bank Negara Indonesia
+456576280,Bank Negara Indonesia
+457758938,Bank Negara Indonesia
+460065973,Bank Negara Indonesia
+460585358,Bank Negara Indonesia
+460810001,Bank Rakyat Indonesia
+462853384,Bank Negara Indonesia
+466204823,Bank Negara Indonesia
+469996085,Bank Negara Indonesia
+470670568,Bank Central Asia
+474437701,Bank Negara Indonesia
+479192774,Bank Central Asia
+479881017,Bank Negara Indonesia
+480393966,Bank Negara Indonesia
+481949233,Bank Negara Indonesia
+482412266,Bank Negara Indonesia
+485474831,Bank Negara Indonesia
+488546588,Bank Negara Indonesia
+488909327,Bank Negara Indonesia
+494552312,Bank Negara Indonesia
+494746851,Bank Negara Indonesia
+495303704,Bank Negara Indonesia
+502763280,Bank Negara Indonesia
+503442518,Bank Negara Indonesia
+505127582,Bank Negara Indonesia
+505489622,Bank Negara Indonesia
+50552713,Bank Central Asia
+506150928,Bank Negara Indonesia
+506647352,Bank Negara Indonesia
+511827301,Bank Central Asia
+521953473,Bank Negara Indonesia
+538330460,Bank Negara Indonesia
+550572818,Bank Central Asia
+562830601,Bank Negara Indonesia
+576575664,Bank Negara Indonesia
+578314146,Bank Negara Indonesia
+580608744,Bank Central Asia
+580877486,Bank Central Asia
+583285117,Bank Negara Indonesia
+583290841,Bank Negara Indonesia
+584306920,Bank Negara Indonesia
+587998735,Bank Negara Indonesia
+611504089,Bank Central Asia
+620437662,Bank Central Asia
+630009448,Bank Central Asia
+657252330,Bank Central Asia
+66271999,Bank CIMB Niaga
+663214346,Bank Central Asia
+668996522,Bank Negara Indonesia
+675500167,Bank Central Asia
+6777,Bank Common Wealth
+689015435,Bank Central Asia
+689744,Bank Negara Indonesia
+712153294,Bank Central Asia
+719001,Bank CIMB Niaga
+73154224,Bank Central Asia
+741011565,Bank Victoria
+750069000,Bank Central Asia
+76555122,Bank Mandiri Syariah
+77553321,Bank Negara Indonesia
+77553344,Bank Negara Indonesia
+78990,Bank Central Asia
+81299992,Bank Negara Indonesia
+813642000,Unknown
+842030277,Bank Central Asia
+860588404,Bank Central Asia
+883001777,Bank Mandiri Syariah
+8888677,Bank CIMB Niaga
+940902649,Bank Central Asia
+948176699,Bank Central Asia
+95231875,Bank Central Asia
+960756053,Bank Central Asia

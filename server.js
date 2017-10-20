@@ -10,25 +10,34 @@ const _ = require('lodash');
 const app = express();
 app.use(morgan('combined'));
 
+function blacklist(number, bank) {
+  if (!cache.get(number))
+    cache.put(number, []);
+  cache.put(number, _.concat(cache.get(number), bank));
+}
+
 // Read blacklisted account numbers
 (function() {
   const blacklistFile = "bin/accs/acc-all.txt";
   const contents = _.split(fs.readFileSync(blacklistFile), "\n");
-  _.forEach(contents, item => cache.put(item, "cekrekening.com"));
+  _.forEach(contents, item => {
+    const arr = _.split(item, ",");
+    blacklist(arr[0], arr[1]);
+  });
 })();
 
-app.get("/check/:account_number", (req, res) => {
-  const { account_number } = req.params;
-  const cached_value = cache.get(account_number);
-  if (cached_value) {
-    return res.send(`Account blacklisted! (${cached_value})`);
+app.get("/check/:account_number/:bank", (req, res) => {
+  const { account_number, bank } = req.params;
+  const blacklisted_banks = cache.get(account_number);
+  if (blacklisted_banks && blacklisted_banks.includes(bank)) {
+    return res.send(`Account blacklisted!`);
   }
   request.get('https://www.kredibel.co.id/check/result/' +
               base64.encode(account_number))
          .end((err, response) => {
     if (response.text.indexOf("Waspada") !== -1) {
-      cache.put(account_number, "kredibel.co.id");
-      return res.send("Account blacklisted! (kredibel.co.id)");
+      cache.put(account_number, "Unknown");
+      return res.send("Account blacklisted! (Unknown bank)");
     }
     return res.send("Account hasn't been reported for fraud.");
   });
