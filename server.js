@@ -1,4 +1,5 @@
 const utils = require('./src/utils');
+const async = require('async');
 const cache = require('memory-cache');
 const express = require('express');
 const fs = require('fs');
@@ -28,7 +29,8 @@ function blacklist(number, bank) {
 })();
 
 app.get("/check/:account_number/:bank", (req, res) => {
-  const { account_number, bank } = req.params;
+  let { account_number, bank } = req.params;
+  bank = _.toLower(bank);
   if (utils.banks.indexOf(bank) === -1) {
     return res.status(400).send("Invalid bank. Valid values are:<br/>" + _.join(utils.banks, "<br/>"));
   }
@@ -37,14 +39,42 @@ app.get("/check/:account_number/:bank", (req, res) => {
   if (blacklisted_banks && blacklisted_banks.includes(bank)) {
     return res.send(`Account blacklisted!`);
   }
-  request.get('https://www.kredibel.co.id/check/result/' +
-              base64.encode(account_number))
-         .end((err, response) => {
-    if (response.text.indexOf("Waspada") !== -1) {
-      cache.put(account_number, "Unknown");
-      return res.send("Account blacklisted! (Unknown bank)");
+  async.parallel({
+    cekrekening:
+      (callback) => request.get(`https://cekrekening.id/search?bank_id=${utils.cekrekening_bankids[bank]}&account_number=${account_number}`)
+        .end((err, response) => {
+          if (err) {
+            return callback(err);
+          }
+          if (response.text.indexOf("Penipuan") !== -1) {
+            return callback(null, true);
+          }
+          return callback(null, false);
+        }),
+    kredibel:
+      (callback) => request.get(`https://www.kredibel.co.id/check/result/${base64.encode(account_number)}`)
+        .end((err, response) => {
+        if (err) {
+          return callback(err);
+        }
+        if (response.text.indexOf("Waspada") !== -1) {
+          return callback(null, true);
+        }
+        return callback(null, false);
+      }),
+  }, (err, result) => {
+    if (err) {
+      return res.status(500).send("Something wrong happened while fetching data: " + err);
     }
-    return res.send("Account hasn't been reported for fraud.");
+    if (result.cekrekening) {
+      blacklist(account_number, bank);
+      return res.send("Account blacklisted!");
+    } else if (result.kredibel) {
+      blacklist(account_number, "Unknown");
+      return res.send("Account blacklisted! (Unknown bank)");
+    } else {
+      return res.send("Account hasn't been reported yet for fraud.");
+    }
   });
 });
 
