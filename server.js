@@ -1,3 +1,4 @@
+const utils = require('./src/utils');
 const cache = require('memory-cache');
 const express = require('express');
 const fs = require('fs');
@@ -28,6 +29,10 @@ function blacklist(number, bank) {
 
 app.get("/check/:account_number/:bank", (req, res) => {
   const { account_number, bank } = req.params;
+  if (utils.banks.indexOf(bank) === -1) {
+    return res.status(400).send("Invalid bank. Valid values are:<br/>" + _.join(utils.banks, "<br/>"));
+  }
+
   const blacklisted_banks = cache.get(account_number);
   if (blacklisted_banks && blacklisted_banks.includes(bank)) {
     return res.send(`Account blacklisted!`);

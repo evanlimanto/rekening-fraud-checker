@@ -1,4 +1,4 @@
-export const banks = [
+const banks = [
   "Bank Tabungan Negara",
   "Bank Permata",
   "Bank Bukopin",
@@ -22,3 +22,7 @@ export const banks = [
   "Bank Victoria",
   "Unknown"
 ];
+
+module.exports = {
+  banks,
+};
