@@ -42,7 +42,7 @@ class App extends Component {
               <div className="control">
                 <div className="select">
                   <select ref="bank">
-                    {banks.sort().map(bank => <option value={bank}>{bank}</option>)}
+                    {banks.sort().map(bank => <option value={bank.toLowerCase()}>{bank.toLowerCase()}</option>)}
                   </select>
                 </div>
               </div>

@@ -31,7 +31,7 @@ function blacklist(number, bank) {
 app.get("/check/:account_number/:bank", (req, res) => {
   let { account_number, bank } = req.params;
   bank = _.toLower(bank);
-  if (utils.banks.indexOf(bank) === -1) {
+  if (utils.banks.map(bank => bank.toLowerCase()).indexOf(bank) === -1) {
     return res.status(400).send("Invalid bank. Valid values are:<br/>" + _.join(utils.banks, "<br/>"));
   }
 
@@ -40,6 +40,17 @@ app.get("/check/:account_number/:bank", (req, res) => {
     return res.send(`Account blacklisted!`);
   }
   async.parallel({
+    cekrekeningcom:
+      (callback) => request.get(`http://cekrekening.com/cari/nomor/${account_number}`)
+        .end((err, response) => {
+          if (err) {
+            return callback(err);
+          }
+          if (response.text.indexOf(account_number) !== -1) {
+            return callback(null, true);
+          }
+          return callback(null, false);
+        }),
     cekrekening:
       (callback) => request.get(`https://cekrekening.id/search?bank_id=${utils.cekrekening_bankids[bank]}&account_number=${account_number}`)
         .end((err, response) => {
@@ -63,15 +74,12 @@ app.get("/check/:account_number/:bank", (req, res) => {
         return callback(null, false);
       }),
   }, (err, result) => {
-    if (err) {
-      return res.status(500).send("Something wrong happened while fetching data: " + err);
-    }
     if (result.cekrekening) {
       blacklist(account_number, bank);
       return res.send("Account blacklisted!");
-    } else if (result.kredibel) {
+    } else if (result.kredibel || result.cekrekeningcom) {
       blacklist(account_number, "Unknown");
-      return res.send("Account blacklisted! (Unknown bank)");
+      return res.send("Account blacklisted!");
     } else {
       return res.send("Account hasn't been reported yet for fraud.");
     }
